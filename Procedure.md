@@ -110,6 +110,34 @@ First let's install Anaconda. Download Anaconda for linux from here;
 
 https://www.anaconda.com/products/individual
 
-Download 64-Bit (x86) Installer which should be about 550 MB.
+Download 64-Bit (x86) Installer which should be about 550 MB and is a .sh file.
 
+Navigate to the folder containing the .sh file and rigth click and open terminal. The enter the below code.
+
+__Note:__ In my case the download file was _Anaconda3-2020.07-Linux-x86_64.sh_. So, I have edited the below code accordingly. When you download the Anaconda file, the name will be different as the version will be different. Replace the file name with your.sh file name.
+
+<code>bash Anaconda3-2020.07-Linux-x86_64.sh</code>
+
+This will be followed by a promt to press 'Enter'. Then read the License Terms and Conditions (Which I am sure you won't). Scroll down and type 'yes' to continue with the installation. 
+
+You will get one more promt asking to confirm the default location. This should be fine for most users press 'Enter' to continue the installation.
+
+After this you will get one more promt _Do you wish the installer to prepend the Anaconda3 install location to PATH:_. Type 'yes' here and 'Enter'. 
+
+After this you will get another promt to install VSCode editor. Since, I wish to use Pycharm, I typed 'no'. If you wish to use VSCode then type 'yes' and follow the instructions. 
+
+### Step 2:
+Check the installation. Type the below code in the terminal.
+
+<code>conda info</code>
+You will get a detailed specification of the conda version etc. So, now that Anaconda is working fine. Let's install TensroFlow GPU.
+
+<code>conda list</code>
+You will see a list of all the packages isntalled under Anaconda alphabetically. As you can see, TensorFlow doesn't come pre-installed.
+
+### Step 3:
+Installing TensorFlow GPU version. Type the following code;
+
+<code>conda install -c anaconda tensorflow-gpu</code>
+In my case the latest version was TensorFlow GPU 2.2.0. It might change in your case. If you need a specific version of TensorFlow then type == and the version for example: conda install -c anaconda tensorflow-gpu==2.4.0
 

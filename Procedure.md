@@ -157,7 +157,7 @@ Now, check if TensorFlow is using the GPU. There are multiple ways of doing this
 
 <code>import tensorflow as tf</code>
 
-<code>print(tf.____version____)</code>
+<code>print(tf.\__version\__)</code>
 
 __Output:__ 2.2.0, (In your case it will show your TensorFlow GPU version.)
 

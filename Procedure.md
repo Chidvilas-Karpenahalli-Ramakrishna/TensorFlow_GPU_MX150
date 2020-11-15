@@ -170,13 +170,10 @@ __Output:__ True, (Ignore the warning. Here if you get False, then there is some
 __Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')], 
 (Here, GPU:0 means your GPU is the default device and TensorFlow is using GPU.)
 
-<code>if tf.test.gpu_device_name():
+<pre><code>if tf.test.gpu_device_name():
     print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
 else:
-    print("Please install GPU version of TF")</code>
-
-__Output:__ Default GPU Device: /device:GPU:0, (As, you can see all the outputs point to the fact that TensorFlow is now using GPU.)
-
+    print("Please install GPU version of TF")</code></pre>
 
 ### Step 5: [Optional]
 Let's write a "Hello world" program for Machine Learning. When you are running this code, you can open terminal and see the gpustat and nvidia-smi output to see the performance of your GPU.

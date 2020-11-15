@@ -14,7 +14,7 @@ I couldn't find a lot of support for installing TensorFlow-GPU >2.0 for MX150 gr
 
 5.) ___cuDNN version:___ 7.6.5
 
- ## Steps:
+ ## Steps to install Cuda:
  Run these commands on your terminal. You can alternatively create a virtual environment and then install these packages if you are willing to install multiple versions of Cuda or TensorFlow.
  
  ### Step 1:
@@ -92,13 +92,24 @@ You should see something similar to the above outputs. Use the following code to
 
 <code>nvidia-smi</code>
 
-NOTE: nvidia-smi might not work as many people complain. Please remove 'secure boot' from your system and it should start working fine. 
+__NOTE:__ nvidia-smi might not work as many people complain. Please remove 'secure boot' from your Ubuntu system and it will start working fine.
 
-Alternatively, I would like to use gpustat as it is more concise than nvidia-smi output and serves my purpose to see the GPU usage. Installing it using the following code and run to see if it works fine.
+Alternatively, I would like to use 'gpustat' as it is more concise than nvidia-smi output and serves my purpose to see the GPU usage. Install it using the following code and run to see if it works fine.
 
 <code>pip3 install gpustat</code> 
 
 <code>gpustat</code>
 
-# That's it with Cuda
+### Cuda has been installed! yay!
+
+## Steps to configure Anaconda and TensorFlow-GPU 2.2.0:
+Now that we have Cuda up and running, let's install TensorFlow-GPU version 2.2.0 on our system.
+
+### Step 1:
+First let's install Anaconda. Download Anaconda for linux from here;
+
+https://www.anaconda.com/products/individual
+
+Download 64-Bit (x86) Installer which should be about 550 MB.
+
 

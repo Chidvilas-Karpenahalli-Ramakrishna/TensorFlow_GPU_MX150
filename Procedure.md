@@ -178,21 +178,21 @@ else:
 ### Step 5: [Optional]
 Let's write a "Hello world" program for Machine Learning. When you are running this code, you can open terminal and see the gpustat and nvidia-smi output to see the performance of your GPU.
 
-<code>import tensorflow as tf</code>
+<pre><code>import tensorflow as tf
 
-<code>import numpy as np</code>
+<code>import numpy as np
 
-<code>X = [1,2,3,4,5,6,7,8,9]</code>
+<code>X = [1,2,3,4,5,6,7,8,9]
 
-<code>Y = [2,4,6,8,10,12,14,16,18]</code>
+<code>Y = [2,4,6,8,10,12,14,16,18]
 
-<code>model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])</code>
+<code>model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])
 
-<code>model.compile(optimizer='sgd', loss='mean_squared_error')</code>
+<code>model.compile(optimizer='sgd', loss='mean_squared_error')
 
-<code>model.fit(X, Y, epochs=500)</code>
+<code>model.fit(X, Y, epochs=500)
 
-<code>print(model.predict([20.0]))</code>
+<code>print(model.predict([20.0]))</code></pre>
 
 __Output:__ I got an output of 39.845165, while the expected output was 40.0. This is due to lack of data. You get the drill!
 

@@ -69,11 +69,11 @@ Give the heading as;
 
 And below, paste this if statement
 
-'''python
+<mark>
 if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-fi'''
+fi</mark>
 
 
 Once done, press 'esc' escape key to go out of the insert mode. Press :wq to write and quit the changes. If you feel you have done some mistake press :q to simply quit without writning the changes and quit. 

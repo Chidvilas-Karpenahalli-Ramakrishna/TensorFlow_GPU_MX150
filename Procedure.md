@@ -14,5 +14,15 @@ I couldn't find a lot of support for installing TensorFlow-GPU >2.0 for MX150 gr
 
 5.) ___cuDNN version:___ 7.6.5
 
- ### Steps:
- <code>nvidia-smi</code>
+ ## Steps:
+ 
+ ### Step 1:
+ Use these codes to remove any traces of previous Cuda installations on your system. These steps are needed only if you have installed Cuda versions before. This is necessary, as the Cuda versions can conflict and cause errors in the isntallation.
+ 
+ <code>sudo rm /etc/apt/sources.list.d/cuda*</code>
+ 
+ <code>sudo apt remove --autoremove nvidia-cuda-toolkit</code>
+ 
+ <code>sudo apt remove --autoremove nvidia-*</code>
+
+

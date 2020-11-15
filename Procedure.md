@@ -186,13 +186,14 @@ Let's write a "Hello world" program for Machine Learning.
 
 <code>import numpy as np</code>
 
-<code>model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])
-
-model.compile(optimizer='sgd', loss='mean_squared_error')
-
-# Input data
+<code>
 X = np.arange(1, 200, 1, dtype=float)
 Y = 2 * X
 
+model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])
+model.compile(optimizer='sgd', loss='mean_squared_error')
+
 model.fit(X, Y, epochs=500)
-print(model.predict([10.0]))</code>
+
+print(model.predict([10.0]))
+</code>

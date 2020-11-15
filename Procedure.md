@@ -65,11 +65,12 @@ The '.profile' file opens. Press 'i' key from your keyboard to insert the below 
 
 Give the heading as;
 
- <code># set PATH for cuda 10.1 installation
- >if [ -d "/usr/local/cuda-10.1/bin/" ]; then
- >    export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
- >   export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
- >fi</code>
+ <pre><code>
+ # set PATH for cuda 10.1 installation
+ if [ -d "/usr/local/cuda-10.1/bin/" ]; then
+    export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+ fi</code></pre>
 
 
 Once done, press 'esc' escape key to go out of the insert mode. Press :wq to write and quit the changes. If you feel you have done some mistake press :q to simply quit without writning the changes and quit. 

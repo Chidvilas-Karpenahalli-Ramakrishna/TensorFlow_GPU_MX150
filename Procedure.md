@@ -1,7 +1,7 @@
-## TensorFlow-GPU 2.2.0 for Nvidia MX150 in Ubuntu 18.04 operating system.
+## TensorFlow-GPU for Nvidia GeForce MX150 in Ubuntu 18.04 operating system
 
 ### Overview:
-I couldn't find a lot of support for installing TensorFlow-GPU >2.0 for MX150 graphics card and hence, I am documenting this for anyone who wishes to do the same. This will be a step-by-step procedure and I will try my best to explain all the steps in detail. 
+I couldn't find a lot of support for installing TensorFlow-GPU >2.0 for MX150 graphics card and hence, I am documenting this for anyone who wishes to do the same. This will be a step-by-step procedure and I will try my best to explain all the steps in detail. It starts from installing Cuda, cuDNN, Anaconda and TensorFlow GPU. It also includes a cute code at the end to see of TensorFlow is working fine.
 
 ### Specifications:
 1.) ___Operating system:___ Ubuntu 18.04.5 LTS
@@ -20,11 +20,11 @@ I couldn't find a lot of support for installing TensorFlow-GPU >2.0 for MX150 gr
  ### Step 1:
  Use these codes to remove any traces of previous Cuda installations on your system. These steps are needed only if you have installed Cuda versions before. This is necessary, as the Cuda versions can conflict and cause errors in the isntallation.
  
- <code>sudo rm /etc/apt/sources.list.d/cuda*</code>
+<code>sudo rm /etc/apt/sources.list.d/cuda*</code>
  
- <code>sudo apt remove --autoremove nvidia-cuda-toolkit</code>
+<code>sudo apt remove --autoremove nvidia-cuda-toolkit</code>
  
- <code>sudo apt remove --autoremove nvidia-*</code>
+<code>sudo apt remove --autoremove nvidia-*</code>
 
 ### Step 2:
 Now let's set-up the necessary Presonal Package Archives (PPAs) needed for Cuda installation. This is the easiest way to get the packages.
@@ -61,14 +61,15 @@ Update the .profile file. First open the .profile file using the below code.
 
 <code>sudo vim ~/.profile</code>
 
-The '.profile' file opens. Press 'i' key from your keyboard to insert the below path. 
-Once you press 'i' you can see -- INSERT -- at the bottom of the terminal which means you are in insert mode. Now copy paste the below code.
+The '.profile' file opens. Press 'i' key from your keyboard to insert the below path. Once you press 'i' you can see -- INSERT -- at the bottom of the terminal which means you are in insert mode. Now copy paste the below code.
 
-<code># set PATH for cuda 10.1 installation
+<code>
+ # set PATH for cuda 10.1 installation
 if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-fi</code>
+fi
+</code>
 
 Once done, press 'esc' escape key to go out of the insert mode. Press :wq to write and quit the changes. If you feel you have done some mistake press :q to simply quit without writning the changes and quit. 
 
@@ -201,4 +202,3 @@ Let's write a "Hello world" program for Machine Learning. When you are running t
 __Output:__ I got an output of 39.845165, while the expeced output was 40.0. This is due to lack of data. You get the drill!
 
 ## TensorFlow GPU is working fine. Enjoy coding!
-

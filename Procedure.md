@@ -180,17 +180,25 @@ As, you can see all the outputs point to the fact that TensorFlow is now using G
 
 
 ### Step 5: [Optional]
-Let's write a "Hello world" program for Machine Learning.
+Let's write a "Hello world" program for Machine Learning. When you are running this code, you can open terminal and see the gpustat and nvidia-smi output to see the performance of your GPU.
 
 <code>import tensorflow as tf</code>
 
 <code>import numpy as np</code>
 
-<code>
-X = np.arange(1, 200, 1, dtype=float)
-Y = 2 * X
-model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])
-model.compile(optimizer='sgd', loss='mean_squared_error')
-model.fit(X, Y, epochs=500)
-print(model.predict([10.0]))
-</code>
+<code>X = [1,2,3,4,5,6,7,8,9]</code>
+
+<code>Y = [2,4,6,8,10,12,14,16,18]</code>
+
+<code>model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])</code>
+
+<code>model.compile(optimizer='sgd', loss='mean_squared_error')</code>
+
+<code>model.fit(X, Y, epochs=500)</code>
+
+<code>print(model.predict([20.0]))</code>
+
+__Output:__ I got an output of 39.845165, while the expeced output was 40.0. This is due to lack of data. You get the drill!
+
+## TensorFlow GPU is working fine. Enjoy coding!
+

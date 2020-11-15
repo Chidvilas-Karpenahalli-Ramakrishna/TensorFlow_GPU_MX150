@@ -159,26 +159,23 @@ Now, check if TensorFlow is using the GPU. There are multiple ways of doing this
 
 <code>print(tf.__version__)</code>
 
-__Output:__ 2.2.0
-In your case it will show your TensorFlow GPU version.
+__Output:__ 2.2.0, (In your case it will show your TensorFlow GPU version.)
 
 <code>tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)</code>
 
-__Output:__ True
-Ignore the warning. Here if you get False then there is something wrong with the installation.
+__Output:__ True, (Ignore the warning. Here if you get False, then there is something wrong with the installation.)
 
 <code>tf.config.list_physical_devices('GPU')</code>
 
-__Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
-Here, GPU:0 means your GPU is the default device and TensorFlow is using GPU.
+__Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')], 
+(Here, GPU:0 means your GPU is the default device and TensorFlow is using GPU.)
 
 <code>if tf.test.gpu_device_name():
     print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
 else:
     print("Please install GPU version of TF")</code>
 
-__Output:__ Default GPU Device: /device:GPU:0
-As, you can see all the outputs point to the fact that TensorFlow is now using GPU.
+__Output:__ Default GPU Device: /device:GPU:0, (As, you can see all the outputs point to the fact that TensorFlow is now using GPU.)
 
 
 ### Step 5: [Optional]

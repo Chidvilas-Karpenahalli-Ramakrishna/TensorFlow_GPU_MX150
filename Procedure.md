@@ -180,19 +180,19 @@ Let's write a "Hello world" program for Machine Learning. When you are running t
 
 <pre><code>import tensorflow as tf
 
-<code>import numpy as np
+import numpy as np
 
-<code>X = [1,2,3,4,5,6,7,8,9]
+X = [1,2,3,4,5,6,7,8,9]
 
-<code>Y = [2,4,6,8,10,12,14,16,18]
+Y = [2,4,6,8,10,12,14,16,18]
 
-<code>model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])
+model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])
 
-<code>model.compile(optimizer='sgd', loss='mean_squared_error')
+model.compile(optimizer='sgd', loss='mean_squared_error')
 
-<code>model.fit(X, Y, epochs=500)
+model.fit(X, Y, epochs=500)
 
-<code>print(model.predict([20.0]))</code></pre>
+print(model.predict([20.0]))</code></pre>
 
 __Output:__ I got an output of 39.845165, while the expected output was 40.0. This is due to lack of data. You get the drill!
 

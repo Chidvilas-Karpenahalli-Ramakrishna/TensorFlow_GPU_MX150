@@ -1,5 +1,10 @@
-## TensorFlow_GPU_MX150
+## TensorFlow-GPU for Nvidia MX150 in Ubuntu 18.04 operating system.
 
 ### Overview:### 
-Here I will discuss the step-by-step procedure to install Tensorflow-GPU version for Nvidia MX150 4GB for Ubuntu 18.04 Operating System. The relevant Cuda versions, the cuDNN versions and the TensorFlow-GPU versions will also be discussed here.
+Procedure to install TensorFlow-GPU for Nvidia GeForce Mx150 graphics card on Ubuntu operating system
 
+### Specifications:###
+1.) Operating system: Ubuntu 18.04.5 LTS
+2.) Graphics card: Nvidia GeForce MX150/PCIe/SSE2, 4GB dedicated DDR5 memory
+3.) 
+ 

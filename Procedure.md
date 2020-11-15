@@ -64,9 +64,11 @@ Update the .profile file. First open the .profile file using the below code.
 The '.profile' file opens. Press 'i' key from your keyboard to insert the below path. Once you press 'i' you can see -- INSERT -- at the bottom of the terminal which means you are in insert mode. Now copy paste the below code.
 
 Give the heading as;
+
 <code># set PATH for cuda 10.1 installation</code>
 
 And below, paste this if statement
+
 <code>
 if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}

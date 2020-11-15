@@ -194,6 +194,6 @@ Let's write a "Hello world" program for Machine Learning. When you are running t
 
 <code>print(model.predict([20.0]))</code>
 
-__Output:__ I got an output of 39.845165, while the expeced output was 40.0. This is due to lack of data. You get the drill!
+__Output:__ I got an output of 39.845165, while the expected output was 40.0. This is due to lack of data. You get the drill!
 
 ## TensorFlow GPU is working fine. Enjoy coding!

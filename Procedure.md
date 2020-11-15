@@ -15,5 +15,4 @@ I couldn't find a lot of support for installing TensorFlow-GPU >2.0 for MX150 gr
 5.) ___cuDNN version:___ 7.6.5
 
  ### Steps:
- 
- '<insall tensorflow>'
+ {nvidia-smi}

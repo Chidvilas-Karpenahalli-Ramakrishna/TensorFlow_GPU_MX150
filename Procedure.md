@@ -178,8 +178,7 @@ else:
 ### Step 5: [Optional]
 Let's write a "Hello world" program for Machine Learning. When you are running this code, you can open terminal and see the gpustat and nvidia-smi output to see the performance of your GPU.
 
-<pre><code>
-import tensorflow as tf
+<pre><code>import tensorflow as tf
 
 import numpy as np
 

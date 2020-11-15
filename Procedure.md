@@ -57,11 +57,18 @@ We need to set the path for Cuda. I will use vim here as the text editor to edit
 
 <code>vim --version</code>
 
-_Update the .profile file_
+Update the .profile file. First open the .profile file using the below code.
 
-<code>sudo vi ~/.profile</code>
+<code>sudo vim ~/.profile</code>
 
-<code></code>
+The '.profile' file opens. Press 'i' key from your keyboard to insert the below path. 
+Once you press 'i' you can see -- INSERT -- at the bottom of the terminal which means you are in insert mode. Now copy paste the below code.
+
+<code># set PATH for cuda 10.1 installation
+if [ -d "/usr/local/cuda-10.1/bin/" ]; then
+    export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi</code>
 <code></code>
 <code></code>
 

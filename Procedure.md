@@ -130,14 +130,69 @@ After this you will get another promt to install VSCode editor. Since, I wish to
 Check the installation. Type the below code in the terminal.
 
 <code>conda info</code>
+
 You will get a detailed specification of the conda version etc. So, now that Anaconda is working fine. Let's install TensroFlow GPU.
 
 <code>conda list</code>
+
 You will see a list of all the packages isntalled under Anaconda alphabetically. As you can see, TensorFlow doesn't come pre-installed.
 
 ### Step 3:
 Installing TensorFlow GPU version. Type the following code;
 
 <code>conda install -c anaconda tensorflow-gpu</code>
+
 In my case the latest version was TensorFlow GPU 2.2.0. It might change in your case. If you need a specific version of TensorFlow then type == and the version for example: conda install -c anaconda tensorflow-gpu==2.4.0
 
+### Step 4: 
+Checking TensorFlow installation.
+
+Go to the terminal and open juypter notebook
+
+<code>jupyter notebook</code>
+
+Now, check if TensorFlow is using the GPU. There are multiple ways of doing this, I am going to list everything here. Everything should return the same result.
+
+<code>import tensorflow as tf</code>
+
+<code>print(tf.__version__)</code>
+
+__Output:__ 2.2.0
+In your case it will show your TensorFlow GPU version.
+
+<code>tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)</code>
+
+__Output:__ True
+Ignore the warning. Here if you get False then there is something wrong with the installation.
+
+<code>tf.config.list_physical_devices('GPU')</code>
+
+__Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+Here, GPU:0 means your GPU is the default device and TensorFlow is using GPU.
+
+<code>if tf.test.gpu_device_name():
+    print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
+else:
+    print("Please install GPU version of TF")</code>
+
+__Output:__ Default GPU Device: /device:GPU:0
+As, you can see all the outputs point to the fact that TensorFlow is now using GPU.
+
+
+### Step 5: [Optional]
+Let's write a "Hello world" program for Machine Learning.
+
+<code>import tensorflow as tf</code>
+
+<code>import numpy as np</code>
+
+<code>model = tf.keras.Sequential([tf.keras.layers.Dense(1, input_shape=[1])])
+
+model.compile(optimizer='sgd', loss='mean_squared_error')
+
+# Input data
+X = np.arange(1, 200, 1, dtype=float)
+Y = 2 * X
+
+model.fit(X, Y, epochs=500)
+print(model.predict([10.0]))</code>

@@ -69,6 +69,36 @@ if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi</code>
-<code></code>
-<code></code>
+
+Once done, press 'esc' escape key to go out of the insert mode. Press :wq to write and quit the changes. If you feel you have done some mistake press :q to simply quit without writning the changes and quit. 
+
+If you haven't done this properly, the terminal will throw an error saying that there is an error in so and so line of '.profile' file. Open the '.profile' file again using vim and make necessary changes.
+
+### Step 5:
+close the terminal. Restart the system and check the installations. 
+
+<code>nvcc --version</code>
+
+___Output:___ nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2019 NVIDIA Corporation
+Built on Sun_Jul_28_19:07:16_PDT_2019
+Cuda compilation tools, release 10.1, V10.1.243
+
+<code>/sbin/ldconfig -N -v $(sed ‘s/:/ /’ <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn</code>
+ 
+ ___Output:___ libcudnn.so.7 -> libcudnn.so.7.6.5
+
+You should see something similar to the above outputs. Use the following code to see the overall GPU stats.
+
+<code>nvidia-smi</code>
+
+NOTE: nvidia-smi might not work as many people complain. Please remove 'secure boot' from your system and it should start working fine. 
+
+Alternatively, I would like to use gpustat as it is more concise than nvidia-smi output and serves my purpose to see the GPU usage. Installing it using the following code and run to see if it works fine.
+
+<code>pip3 install gpustat</code> 
+
+<code>gpustat</code>
+
+# That's it with Cuda
 

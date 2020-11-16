@@ -184,6 +184,9 @@ else:
     print("Please install GPU version of TF")
 ```
 
+__Output:__ Default GPU Device: /device:GPU:0<br>
+(Here, GPU:0 is the expected output. Which means this is your primary device and TensorFlow is using GPU.
+
 ### Step 5: [Optional]
 Let's write a "Hello world" program for Machine Learning. When you are running this code, you can open terminal and see the gpustat and nvidia-smi output to see the performance of your GPU.
 

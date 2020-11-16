@@ -157,7 +157,7 @@ Go to the terminal and open juypter notebook.
 Now, check if TensorFlow is using the GPU. There are multiple ways of doing this, I am going to list many methods here. Everything should return the same result.
 
 ```python
-import tensorflow as tf</code>
+import tensorflow as tf
 
 print(tf.__version__)
 ```

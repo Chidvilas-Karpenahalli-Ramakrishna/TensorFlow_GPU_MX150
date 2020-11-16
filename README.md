@@ -179,7 +179,7 @@ else:
 Let's write a "Hello world" program for Machine Learning. When you are running this code, you can open terminal and see the gpustat and nvidia-smi output to see the performance of your GPU.
 
 '''python
-<pre><code>import tensorflow as tf
+import tensorflow as tf
 
 import numpy as np
 
@@ -193,7 +193,7 @@ model.compile(optimizer='sgd', loss='mean_squared_error')
 
 model.fit(X, Y, epochs=500)
 
-print(model.predict([20.0]))</code></pre>
+print(model.predict([20.0]))
 '''
 
 __Output:__ I got an output of 39.845165, while the expected output was 40.0. This is due to lack of data. You get the drill!

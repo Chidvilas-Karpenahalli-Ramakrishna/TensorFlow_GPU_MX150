@@ -80,15 +80,14 @@ close the terminal. Restart the system and check the installations.
 
 <code>nvcc --version</code>
 
-___Output:___ nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2019 NVIDIA Corporation
-Built on Sun_Jul_28_19:07:16_PDT_2019
-Cuda compilation tools, release 10.1, V10.1.243
+___Output:___ nvcc: NVIDIA (R) Cuda compiler driver<br>
+Copyright (c) 2005-2019 NVIDIA Corporation<br>
+Built on Sun_Jul_28_19:07:16_PDT_2019<br>
+Cuda compilation tools, release 10.1, V10.1.243<br>
 
 <code>/sbin/ldconfig -N -v $(sed ‘s/:/ /’ <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn</code>
  
- ___Output:___ libcudnn.so.7 -> libcudnn.so.7.6.5
-
+ ___Output:___ libcudnn.so.7 -> libcudnn.so.7.6.5<br>
 You should see something similar to the above outputs. Use the following code to see the overall GPU stats.
 
 <code>nvidia-smi</code>
@@ -168,13 +167,14 @@ __Output:__ 2.2.0, (In your case it will show your TensorFlow GPU version.)
 tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)
 ```
 
-__Output:__ True, (Ignore the warning. Here if you get False, then there is something wrong with the installation.)
+__Output:__ True<br>
+(Ignore the warning. Here if you get False, then there is something wrong with the installation.)
 
 ```python
 tf.config.list_physical_devices('GPU')
 ```
 
-__Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')], 
+__Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')],<br> 
 (Here, GPU:0 means your GPU is the default device and TensorFlow is using GPU.)
 
 ```python

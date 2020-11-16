@@ -155,25 +155,33 @@ Go to the terminal and open juypter notebook.
 
 Now, check if TensorFlow is using the GPU. There are multiple ways of doing this, I am going to list many methods here. Everything should return the same result.
 
-<code>import tensorflow as tf</code>
+```python
+import tensorflow as tf</code>
 
-<code>print(tf.\_\_version\_\_)</code>
+print(tf.__version__)
+```
 
 __Output:__ 2.2.0, (In your case it will show your TensorFlow GPU version.)
 
-<code>tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)</code>
+```python
+tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)
+```
 
 __Output:__ True, (Ignore the warning. Here if you get False, then there is something wrong with the installation.)
 
-<code>tf.config.list_physical_devices('GPU')</code>
+```python
+tf.config.list_physical_devices('GPU')
+```
 
 __Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')], 
 (Here, GPU:0 means your GPU is the default device and TensorFlow is using GPU.)
 
-<pre><code>if tf.test.gpu_device_name():
+```python
+if tf.test.gpu_device_name():
     print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
 else:
-    print("Please install GPU version of TF")</code></pre>
+    print("Please install GPU version of TF")
+```
 
 ### Step 5: [Optional]
 Let's write a "Hello world" program for Machine Learning. When you are running this code, you can open terminal and see the gpustat and nvidia-smi output to see the performance of your GPU.

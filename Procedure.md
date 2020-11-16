@@ -161,7 +161,8 @@ import tensorflow as tf
 print(tf.__version__)
 ```
 
-__Output:__ 2.2.0, (In your case it will show your TensorFlow GPU version.)
+__Output:__ 2.2.0<br>
+(In your case it will show your TensorFlow GPU version.)
 
 ```python
 tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None)
@@ -174,7 +175,7 @@ __Output:__ True<br>
 tf.config.list_physical_devices('GPU')
 ```
 
-__Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')],<br> 
+__Output:__ [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]<br> 
 (Here, GPU:0 means your GPU is the default device and TensorFlow is using GPU.)
 
 ```python

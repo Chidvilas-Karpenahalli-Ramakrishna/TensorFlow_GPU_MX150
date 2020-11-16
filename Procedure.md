@@ -93,6 +93,7 @@ You should see something similar to the above outputs. Use the following code to
 <code>nvidia-smi</code>
 
 __NOTE:__ nvidia-smi might not work as many people complain. Please remove 'secure boot' from your Ubuntu system and it will start working fine.
+__NOTE:__ Nvidia-smi will show you the Cuda version that's installed with the nvidia drivers. It might be different from the Cuda version you had installed. Don't be alarmed.
 
 Alternatively, I would like to use 'gpustat' as it is more concise than nvidia-smi output and serves my purpose to see the GPU usage. Install it using the following code and run to see if it works fine.
 

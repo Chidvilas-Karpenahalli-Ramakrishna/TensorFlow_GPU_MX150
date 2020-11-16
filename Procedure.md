@@ -63,12 +63,13 @@ Update the '.profile' file. First open the '.profile' file using the below code.
 
 The '.profile' file opens. Press <code>i</code> key from your keyboard to enter insert mode. Once you press <code>i</code> you can see -- INSERT -- at the bottom of the terminal which means you are in insert mode. Now copy paste the below code in the same format.
 
- <pre><code>
+```
  # set PATH for cuda 10.1 installation
  if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
- fi</code></pre>
+ fi
+ ```
 
 Once done, press <code>esc</code> key to go out of the insert mode. Type <code>:wq</code> to write the changes and quit. If you feel you have done some mistake press <code>:q</code> to simply quit without writing the changes. You can open again and make changes. 
 

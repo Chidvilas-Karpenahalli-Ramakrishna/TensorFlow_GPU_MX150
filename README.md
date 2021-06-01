@@ -145,7 +145,9 @@ Installing TensorFlow GPU version. Type the following code;
 
 <code>conda install -c anaconda tensorflow-gpu</code>
 
-In my case the latest version was TensorFlow GPU 2.2.0. It might change in your case. If you need a specific version of TensorFlow then type == and the version for example: <code>conda install -c anaconda tensorflow-gpu==2.4.0</code>
+In my case the latest version was TensorFlow GPU 2.2.0. It might change in your case. You can check the versions of tensorflow-gpu available by typing <code>conda search tensorflow-gpu</code>. Some versions like <code>tensorflow-gpu 2.3.0</code> might not be available from the channel. Check for the specific version of Cuda and cuDNN needed for the version of tensorflow-gpu being installed from https://www.tensorflow.org/install/source and modify the version in <code>Step 3</code> accordingly. For <code>Cuda 10.1</code> and <code>cuDNN 7.6</code> that was installed <code>tensorflow-gpu 2.2.0</code> and <code>tensorflow-gpu 2.3.0</code> will work.
+ 
+If you need a specific version of TensorFlow then type == and the version for example: <code>conda install -c anaconda tensorflow-gpu==2.4.1</code>
 
 ### Step 4: 
 Checking TensorFlow installation.
